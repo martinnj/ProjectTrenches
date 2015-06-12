@@ -6,6 +6,17 @@
 public class Enums {
 
     /// <summary>
+    /// Different playable factions.
+    /// </summary>
+    public enum Faction
+    {
+        Monsters,  // Includes monsters/beasts and the wild hunt.
+        Squirrels, // Scoia'tel.
+        Nilfgaard, // Nilfgaardian empire.
+        Northern   // The Northern Kingdoms.
+    }
+
+    /// <summary>
     /// Enum to represent where on the board this card belongs.
     /// </summary>
     public enum CardType

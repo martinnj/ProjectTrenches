@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,17 +29,17 @@ public class Card : MonoBehaviour
     /// <summary>
     /// Image containing the cards monicker (area that contains strength).
     /// </summary>
-    public UnityEngine.UI.Image CardMonicker;
+    public Image CardMonicker;
 
     /// <summary>
     /// Image with card protrait.
     /// </summary>
-    public UnityEngine.UI.Image CardPortrait;
+    public Image CardPortrait;
 
     /// <summary>
     /// Image containing the cards background look.
     /// </summary>
-    public UnityEngine.UI.Image CardBackground;
+    public Image CardBackground;
     #endregion
 
     #region "Stats & Attributes"
