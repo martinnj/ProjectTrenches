@@ -27,3 +27,17 @@ public class DeckEmptyException : GwentException
 	System.Runtime.Serialization.SerializationInfo info, 
 	System.Runtime.Serialization.StreamingContext context ) : base( info, context ) { }
 }
+
+/// <summary>
+/// Exception raised when a file contains an invalid JSON deck.
+/// </summary>
+public class DeckLoaderException : GwentException
+{
+    public DeckLoaderException() { }
+    public DeckLoaderException(string message) : base(message) { }
+    public DeckLoaderException(string message, System.Exception inner) : base(message, inner) { }
+    protected DeckLoaderException(
+      System.Runtime.Serialization.SerializationInfo info,
+      System.Runtime.Serialization.StreamingContext context)
+        : base(info, context) { }
+}

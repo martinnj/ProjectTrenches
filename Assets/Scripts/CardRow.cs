@@ -13,7 +13,9 @@ public class CardRow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        Cards = new List<Card>();
+        MoraleCard = null;
+        CurrentWeather = Enums.WeatherType.None;
 	}
 	
 	// Update is called once per frame

@@ -16,18 +16,35 @@ public class Board : MonoBehaviour
     #region "Card piles and areas"
     public List<Card> WeatherCards;
 
-    public List<Card> Player1Deck;
+    public Deck Player1Deck;
     public List<Card> Player1Hand;
     public List<Card> Player1Discard;
     public CardRow Player1Infantry;
     public CardRow Player1Ranged;
     public CardRow Player1Siege;
 
-    public List<Card> Player2Deck;
+    public Deck Player2Deck;
     public List<Card> Player2Hand;
     public List<Card> Player2Discard;
     public CardRow Player2Infantry;
     public CardRow Player2Ranged;
     public CardRow Player2Siege;
+    #endregion
+
+    #region "Unity functions"
+    // Use this for initialization
+    void Start()
+    {
+        Player1Hand = new List<Card>();
+        Player1Discard = new List<Card>();
+        Player2Hand = new List<Card>();
+        Player2Discard = new List<Card>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
     #endregion
 }

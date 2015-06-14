@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Deck : MonoBehaviour {
 
+    public Image CardBack;
     public List<Card> Cards;
 
     /// <summary>
@@ -50,7 +52,7 @@ public class Deck : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        Cards = new List<Card>();
 	}
 	
 	// Update is called once per frame
