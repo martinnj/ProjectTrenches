@@ -50,6 +50,7 @@ public class Enums {
         Frost, // Reduce all infrantry to base strength 1.
         Fog,   // Reduce all ranged to base strength 1.
         Rain,  // Reduce all siege to base strength 1.
-        Shine  // Disspell all active weather cards.
+        Shine, // Disspell all active weather cards.
+        None   // No Weather.
     };
 }

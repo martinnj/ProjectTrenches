@@ -19,15 +19,15 @@ public class Board : MonoBehaviour
     public List<Card> Player1Deck;
     public List<Card> Player1Hand;
     public List<Card> Player1Discard;
-    public List<Card> Player1Infantry;
-    public List<Card> Player1Ranged;
-    public List<Card> Player1Siege;
+    public CardRow Player1Infantry;
+    public CardRow Player1Ranged;
+    public CardRow Player1Siege;
 
     public List<Card> Player2Deck;
     public List<Card> Player2Hand;
     public List<Card> Player2Discard;
-    public List<Card> Player2Infantry;
-    public List<Card> Player2Ranged;
-    public List<Card> Player2Siege;
+    public CardRow Player2Infantry;
+    public CardRow Player2Ranged;
+    public CardRow Player2Siege;
     #endregion
 }
