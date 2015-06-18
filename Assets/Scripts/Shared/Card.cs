@@ -8,6 +8,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Class representing a playable card in the game.
 /// </summary>
+[Serializable]
 public class Card : MonoBehaviour
 {
 

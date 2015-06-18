@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
-using Newtonsoft.Json;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
+
+/// <summary>
+/// Utility class containing functions that don't need to belong in any specific class.
+/// </summary>
 public static class Utils
 {
     /// <summary>
@@ -28,7 +33,7 @@ public static class Utils
     }
 
     /// <summary>
-    /// Parses a .deck file (JSON) into a Deck object.
+    /// Parses a .deck file into a Deck object.
     /// </summary>
     /// <param name="filePath">Path to the filename with the deck in it.</param>
     /// <returns>Returns a deck representing the data from the file.</returns>
@@ -37,11 +42,11 @@ public static class Utils
         try
         {
             Deck deck;
-            using (StreamReader sr = new StreamReader(filePath))
+            using (FileStream fs = new FileStream(filePath, FileMode.Open))
             {
-                String json = sr.ReadToEnd();
-                deck = JsonConvert.DeserializeObject<Deck>(json);
-                sr.Close();
+                IFormatter formatter = new BinaryFormatter();
+                deck = (Deck) formatter.Deserialize(fs);
+                fs.Close();
 
             }
             return deck;
@@ -53,7 +58,7 @@ public static class Utils
     }
 
     /// <summary>
-    /// Saves a deck as a .deck (JSON) file.
+    /// Saves a deck as a .deck file.
     /// </summary>
     /// <param name="filePath">String indicating where to save the deck.</param>
     /// <param name="deck">The deck to serialize and save.</param>
@@ -61,11 +66,11 @@ public static class Utils
     {
         try
         {
-            using (StreamWriter sw = new StreamWriter(filePath))
+            using (FileStream fs = new FileStream(filePath, FileMode.Create))
             {
-                string Json = JsonConvert.SerializeObject(deck);
-                sw.Write(Json);
-                sw.Close();
+                IFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(fs, deck);
+                fs.Close();
             }
         }
         catch (Exception ex)

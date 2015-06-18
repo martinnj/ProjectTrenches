@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
+[Serializable]
 public class Deck : MonoBehaviour {
 
     public Image CardBack;
@@ -32,7 +35,7 @@ public class Deck : MonoBehaviour {
     /// Draws (and thus removes) the 'n' topmost cards from the deck. If there is less than n cards in the deck, the entire deck will be drawn.
     /// </summary>
     /// <param name="n">Numnber of cards to draw.</param>
-    /// <remarks>Uses the draw function recursively.</remarks>
+    /// <remarks>Uses the Draw() function recursively.</remarks>
     /// <returns>A list of the Card type containing n elements or less if the deck is too small.</returns>
     public List<Card> Take(int n)
     {
