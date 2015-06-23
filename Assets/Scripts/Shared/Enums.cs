@@ -14,7 +14,20 @@ public class Enums {
         Soviet,        // Representing The Soviet Union.
         EuropeanAxis,  // Representing Germany, Italy and their allies.
         Japan          // Representing Japan.
-    }
+    };
+
+    /// <summary>
+    /// Abilities that can be assigned to faction leaders.
+    /// Abilities can be triggered once pr game.
+    /// </summary>
+    /// <remarks>Very temporary list, as in really very temporary.</remarks>
+    public enum FactionLeaderAbilities
+    {
+        ClearWeather,  // May clear the weapther once pr game.
+        KillStrongest, // Kills the strongest unit on the board. (Including players own?)
+        Regroup,       // Take a card from discard pile, play at once
+        FreeSupport    // Get a free support unit.
+    };
 
     /// <summary>
     /// Enum to represent where on the board this card belongs.
