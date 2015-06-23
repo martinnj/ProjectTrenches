@@ -10,10 +10,10 @@ public class Enums {
     /// </summary>
     public enum Faction
     {
-        Monsters,  // Includes monsters/beasts and the wild hunt.
-        Squirrels, // Scoia'tel.
-        Nilfgaard, // Nilfgaardian empire.
-        Northern   // The Northern Kingdoms.
+        WesternAllies, // Representing Great Britain, France, USA and the other western allies.
+        Soviet,        // Representing The Soviet Union.
+        EuropeanAxis,  // Representing Germany, Italy and their allies.
+        Japan          // Representing Japan.
     }
 
     /// <summary>
@@ -22,10 +22,10 @@ public class Enums {
     public enum CardType
     {
         Infantry, // Front row.
-        Ranged,   // Mid row.
-        Siege,    // Rear row.
+        Armour,   // Mid row.
+        Artillery,// Rear row.
         Weather,  // Weather/environment box.
-        Morale    // Goes next to a row.
+        Support   // Goes next to a row.
     };
 
     /// <summary>
@@ -33,13 +33,13 @@ public class Enums {
     /// </summary>
     public enum CardAbility
     {
-        Hero,       // Heroes cannot interact with special cards or abilities.
-        Spy,        // Play to opponents area, take 2 random cards from your deck.
-        TightBond,  // For each card with same name in row, double strength.
-        Horde,      // Play any card with same name from your deck.
-        Revive,     // Take a card from discard pile, play at once.
-        Diversion,  // Replace a card on your battlefield and return it to hand.
-        RowBuff     // Buff all cards in the row with +1 strength.
+        Hero,                 // Heroes cannot interact with special cards or abilities.
+        Intelligence,         // Play to opponents area, take 2 random cards from your deck.
+        SquadMates,           // For each card with same name in row, double strength.
+        OrganizedDeplaoyment, // Play any card with same name from your deck.
+        Regroup,              // Take a card from discard pile, play at once.
+        Diversion,            // Replace a card on your battlefield and return it to hand.
+        RowBuff               // Buff all cards in the row with +1 strength.
     };
 
     /// <summary>
@@ -48,8 +48,8 @@ public class Enums {
     public enum WeatherType
     {
         Frost, // Reduce all infrantry to base strength 1.
-        Fog,   // Reduce all ranged to base strength 1.
-        Rain,  // Reduce all siege to base strength 1.
+        Rain,  // Reduce all armour to base strength 1.
+        Fog,   // Reduce all artillery to base strength 1.
         Shine, // Disspell all active weather cards.
         None   // No Weather.
     };

@@ -13,6 +13,10 @@ public class Navigation : MonoBehaviour {
     {
     }
 
+    /// <summary>
+    /// Loads a specified scene.
+    /// </summary>
+    /// <param name="sceneName">Name of the scene to load.</param>
    public void navigate(string sceneName)
     {
         Debug.Log("navigate was triggered.");
