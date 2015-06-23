@@ -6,7 +6,7 @@ public class CardRow : MonoBehaviour {
 
 
     public Enums.WeatherType CurrentWeather;
-    public Card MoraleCard;
+    public Card SupportCard;
     public List<Card> Cards;
 
     public int TotalStength;
@@ -14,7 +14,7 @@ public class CardRow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Cards = new List<Card>();
-        MoraleCard = null;
+        SupportCard = null;
         CurrentWeather = Enums.WeatherType.None;
 	}
 	
